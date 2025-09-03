@@ -20,19 +20,22 @@
       "default": "./package.json"
     },
     ".": {
-      "es2020": "./es2020/index.js",
-      "node": "./cjs/index.js",
-      "default": "./es2020/index.js",
+      "import": "./es2020/index.js",
       "require": "./cjs/index.js",
-      "import": "./es2020/index.js"
+      "default": "./es2020/index.js",
+      "types": "./es2020/index.d.ts"
     },
     "./util": {
-      "types": "./util/index.d.ts",
-      "es2020": "./util/es2020/index.js",
-      "node": "./util/cjs/index.js",
-      "default": "./util/es2020/index.js",
-      "require": "./util/cjs/index.js",
-      "import": "./util/es2020/index.js"
+      "import": "./es2020/util.js",
+      "require": "./cjs/util.js",
+      "default": "./es2020/util.js",
+      "types": "./es2020/util.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "util": ["es2020/util.d.ts"],
+      "*": ["es2020/index.d.ts"]
     }
   }
 }
