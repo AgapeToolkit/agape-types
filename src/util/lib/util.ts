@@ -1,5 +1,4 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { Class } from '@agape/types';
+import { Class } from '../..'
 
 export function classExtends(target: Class, ancestor: Class) {
   if (target === ancestor) {
