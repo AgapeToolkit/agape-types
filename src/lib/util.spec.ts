@@ -1,4 +1,4 @@
-import { classExtends } from '../util/lib/util'
+import { classExtends } from './util'
 
 describe('utility functions', () => {
   describe('classExtends', () => {

@@ -1,4 +1,4 @@
-name: Validate @agape/string in monorepo context
+name: Validate @agape/types
 
 on:
   pull_request:
@@ -69,8 +69,8 @@ jobs:
 
       - name: Run lint for @agape/types
         working-directory: ../AgapeToolkit
-        run: npx nx lint string
+        run: npx nx lint types
 
       - name: Run tests for @agape/types
         working-directory: ../AgapeToolkit
-        run: npx nx test string --no-watch --ci
+        run: npx nx test types --no-watch --ci
