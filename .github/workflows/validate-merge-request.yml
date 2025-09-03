@@ -53,7 +53,7 @@ jobs:
             fi
           '
 
-      - name: Replace string code in monorepo
+      - name: Replace library code in monorepo
         run: |
           rm -rf ../AgapeToolkit/libs/types
           cp -r . ../AgapeToolkit/libs/types

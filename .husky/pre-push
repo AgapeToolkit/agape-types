@@ -1,2 +1,2 @@
-npx nx lint string
-npx nx test string --no-watch --ci
+npx nx lint types
+npx nx test types --no-watch --ci

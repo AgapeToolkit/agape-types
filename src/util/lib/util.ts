@@ -1,4 +1,4 @@
-import { Class } from './types'
+import { Class } from '../..'
 
 export function classExtends(target: Class, ancestor: Class) {
   if (target === ancestor) {
