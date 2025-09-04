@@ -12,17 +12,9 @@ Any constructor function
 
 A constructor function which extends another class as `T`
 
-`Dictionary`
-
-Plain old javascript object key/value pairs
-
-`Dictionary<T>`
-
-Plain old Javascript object with values of type `T`
-
 ### Generics
 
-`OmitMethods<T>`
+`Properties<T>`
 
 All properties except methods
 
@@ -52,11 +44,9 @@ Returns true if the `target` is a derivative or equal to `ancestor`
 
 Maverik Minett  maverik.minett@gmail.com
 
-
 ## Copyright
 
-© 2023-2024 Maverik Minett
-
+© 2023-2025 Maverik Minett
 
 ## License
 
