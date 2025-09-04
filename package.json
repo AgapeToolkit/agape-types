@@ -1,0 +1,41 @@
+{
+  "name": "@agape/types",
+  "version": "2.0.0",
+  "description": "Type definitions",
+  "type": "commonjs",
+  "main": "./cjs/index.js",
+  "module": "./es2020/index.js",
+  "keywords": [
+    "agape",
+    "types"
+  ],
+  "author": {
+    "name": "Maverik Minett",
+    "email": "maverik.minett@gmail.com"
+  },
+  "license": "MIT",
+  "es2020": "./es2020/index.js",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "import": "./es2020/index.js",
+      "require": "./cjs/index.js",
+      "default": "./es2020/index.js",
+      "types": "./es2020/index.d.ts"
+    },
+    "./util": {
+      "import": "./es2020/util.js",
+      "require": "./cjs/util.js",
+      "default": "./es2020/util.js",
+      "types": "./es2020/util.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "util": ["es2020/util.d.ts"],
+      "*": ["es2020/index.d.ts"]
+    }
+  }
+}
