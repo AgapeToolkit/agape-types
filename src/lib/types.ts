@@ -1,17 +1,57 @@
+/**
+ * A type representing a class constructor.
+ *
+ * ## Usage
+ *
+ * ### Any Class
+ *
+ * ```ts
+ * class Controller {
+ *   constructor(public model: Class) {
+ *
+ *   }
+ * }
+ *
+ * const controller: new Controller(MyModel);
+ * ```
+ *
+ * ### Specify a Class Type
+ *
+ * ```ts
+ * class EmployeeTimesheet {
+ *   constructor(public model: Class<Employee>) {
+ *
+ *   }
+ * }
+ *```
+ * @typeParam T - Required ancestor or interface for the class
+ */
 export type Class<T=any> = { new(...args: any[]): T; };
 
-export type IsPrimitive<T> = T extends string
-  | number
-  | boolean
-  | null
-  | undefined
-  ? true : false;
-
-export type IsAny<T> = T extends any ? true : false
-export type IsArray<T> = T extends Array<infer I> ? true : false
-export type IsDate<T> = T extends Date ? true : false
-export type IsFunction<T> = T extends Function ? true : false
-export type IsMap<T> = T extends Map<infer K, infer V> ? true : false
-export type IsSet<T> = T extends Set<infer X> ? true : false
-
-export type Properties<T> = Pick< T, { [K in keyof T]: IsFunction<T[K]> extends true ? never : K }[keyof T] >;
+/**
+ * All properties except methods and functions
+ *
+ * ## Usage
+ *
+ * ```ts
+ * class Foo {
+ *   foo: string;
+ *
+ *   bar: string;
+ *
+ *   constructor(params: Properties<Foo>) {
+ *
+ *   }
+ *
+ *   baz() {
+ *
+ *   }
+ * }
+ *
+ *
+ * const params: Properties<Foo> = { foo: 'foo', bar: 'bar' };
+ * ```
+ *
+ * @typeParam T - The object to select properties from
+ */
+export type Properties<T extends object> = Pick< T, { [K in keyof T]: T[K] extends Function ? never : K }[keyof T] >;
