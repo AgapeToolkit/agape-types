@@ -1,8 +1,7 @@
 /**
  * A type representing a class constructor.
  *
- * ## Usage
- *
+ * @example
  * ### Any Class
  *
  * ```ts
@@ -15,6 +14,7 @@
  * const controller: new Controller(MyModel);
  * ```
  *
+ * @example
  * ### Specify a Class Type
  *
  * ```ts
@@ -31,8 +31,7 @@ export type Class<T=any> = { new(...args: any[]): T; };
 /**
  * All properties except methods and functions
  *
- * ## Usage
- *
+ * @example
  * ```ts
  * class Foo {
  *   foo: string;
