@@ -14,6 +14,7 @@
     "email": "maverik.minett@gmail.com"
   },
   "license": "MIT",
+  "homepage": "https://agape.dev",
   "es2020": "./es2020/index.js",
   "exports": {
     "./package.json": {
