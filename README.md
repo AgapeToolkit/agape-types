@@ -1,29 +1,52 @@
-# Agape Types
+# @agape/types
 
-Types
+Utility TypeScript types used across the [AgapeToolkit](https://github.com/AgapeToolkit/AgapeToolkit) ecosystem.
 
-## Types
+## ✨ Types
 
-`Class`
+### `Class`
+Represents any constructor function.
+```ts
+type Class = { new (...args: any[]): any };
+```
 
-Any constructor function
+### `Class<T>`
+Represents a constructor function that returns an instance of `T`.
+```ts
+type Class<T> = { new (...args: any[]): T };
+```
 
-`Class<T>`
+### `Properties<T>`
+Extracts only the data properties of `T`, excluding methods.
+```ts
+type Properties<T> = Pick<T, { [K in keyof T]: T[K] extends Function ? never : K }[keyof T]>;
+```
 
-A constructor function which extends another class as `T`
+---
 
-`Properties<T>`
+## 🚀 Example
 
-All properties except methods and functions
+```ts
+import { Class, Properties } from '@agape/types';
 
-## Author
+class User {
+  id!: number;
+  name!: string;
 
-Maverik Minett  maverik.minett@gmail.com
+  constructor(params: Properties<User>) {
+    Object.assign(this, params);
+  }
+}
 
-## Copyright
+const model: Class = User;
+```
+---
 
-© 2023-2025 Maverik Minett
+## 📚 Documentation
 
-## License
+See the full API documentation at [agape.dev/api](https://agape.dev/api).
 
-MIT
+
+## 📦 Agape Toolkit
+
+This package is part of the [Agape Toolkit](https://github.com/AgapeToolkit/AgapeToolkit) - a comprehensive collection of TypeScript utilities and libraries for modern web development.
