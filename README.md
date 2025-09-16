@@ -40,15 +40,13 @@ class User {
 
 const model: Class = User;
 ```
-
 ---
 
 ## 📚 Documentation
 
-See the full docs at [agape.dev/api](https://agape.dev/api).
+See the full API documentation at [agape.dev/api](https://agape.dev/api).
 
----
 
-## 📦 Repository
+## 📦 Agape Toolkit
 
-This package is part of the [AgapeToolkit monorepo](https://github.com/AgapeToolkit/AgapeToolkit).
+This package is part of the [Agape Toolkit](https://github.com/AgapeToolkit/AgapeToolkit) - a comprehensive collection of TypeScript utilities and libraries for modern web development.
