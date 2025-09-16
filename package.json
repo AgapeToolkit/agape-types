@@ -15,6 +15,10 @@
   },
   "license": "MIT",
   "homepage": "https://agape.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgapeToolkit/AgapeToolkit"
+  },
   "es2020": "./es2020/index.js",
   "exports": {
     "./package.json": {
